@@ -15,11 +15,11 @@
         }
 
         .glow-red {
-            box-shadow: 0 0 30px rgba(239, 68, 68, 0.3);
+            box-shadow: 0 0 40px rgba(239, 68, 68, 0.4);
         }
 
         .glow-purple {
-            box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+            box-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
         }
 
         .text-glow-purple {
@@ -27,12 +27,21 @@
         }
 
         .bg-cyber {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0b2e 100%);
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a0b2e 100%);
         }
 
         .nav-blur {
             backdrop-filter: blur(10px);
             background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Ajuste para imagens não cortarem detalhes técnicos */
+        .img-display {
+            width: 100%;
+            height: auto;
+            max-height: 700px;
+            object-fit: contain;
+            background-color: #000;
         }
     </style>
 </head>
@@ -51,13 +60,14 @@
         </div>
     </nav>
 
-    <!-- Hero Section - Painel Vermelho -->
-    <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+    <!-- Hero Section - Painel Vermelho no Topo -->
+    <section class="relative pt-32 pb-12 px-6 overflow-hidden">
         <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-red-900/10 blur-[120px] rounded-full"></div>
         
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8 relative z-10 text-center lg:text-left">
-                <div class="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/30 px-4 py-2 rounded-full mx-auto lg:mx-0">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <!-- Texto Centralizado -->
+            <div class="space-y-8 text-center">
+                <div class="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/30 px-4 py-2 rounded-full">
                     <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                     <span class="text-[10px] uppercase font-black tracking-widest text-red-400">Instalação Padrão de Fábrica</span>
                 </div>
@@ -65,28 +75,27 @@
                     O Futuro é <br />
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600 text-glow-purple">Custom.</span>
                 </h1>
-                <p class="text-stone-400 text-lg md:text-xl max-w-lg leading-relaxed italic mx-auto lg:mx-0">
+                <p class="text-stone-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed italic">
                     Personalização premium com sistema de fibra ótica. 100% Plug & Play, sem corte de fios e preservando a originalidade do seu veículo.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="https://wa.me/message/OGFM7AEP7MNSP1" class="bg-purple-600 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-[0_0_30px_rgba(168,85,247,0.4)]">
-                        Agendar Agora
+                <div class="pt-4">
+                    <a href="https://wa.me/message/OGFM7AEP7MNSP1" class="bg-purple-600 text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-[0_0_30px_rgba(168,85,247,0.4)]">
+                        Agendar Orçamento
                     </a>
                 </div>
             </div>
 
-            <div class="relative">
-                <div class="rounded-[2.5rem] overflow-hidden border border-red-500/30 glow-red">
-                    <img src="https://i.ibb.co/C59hgK1X/1767823996072.jpg" alt="Painel em Vermelho" class="w-full h-[500px] object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <!-- Foto Grande do Painel Vermelho -->
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-purple-600 rounded-[2.5rem] blur opacity-25"></div>
+                <div class="relative rounded-[2rem] overflow-hidden border border-red-500/30 glow-red bg-black">
+                    <img src="https://i.ibb.co/C59hgK1X/1767823996072.jpg" alt="Painel em Vermelho Customizado" class="img-display">
                     <div class="absolute bottom-6 left-6 right-6 p-6 bg-black/60 backdrop-blur-md rounded-2xl border border-white/10 flex justify-between items-center">
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-red-500/20 flex items-center justify-center rounded-lg">
-                                <span class="text-red-500">📱</span>
-                            </div>
+                            <span class="text-2xl">📱</span>
                             <div>
                                 <p class="text-xs font-black uppercase text-white">Controle por App</p>
-                                <p class="text-[10px] text-stone-400 uppercase font-bold">Cores Infinitas via Bluetooth</p>
+                                <p class="text-[10px] text-stone-400 uppercase font-bold tracking-tight">Cores Infinitas & Botão Oculto</p>
                             </div>
                         </div>
                     </div>
@@ -111,7 +120,7 @@
             <div class="text-center space-y-3">
                 <span class="text-2xl">📱</span>
                 <h4 class="font-black uppercase italic text-xs tracking-widest">App Control</h4>
-                <p class="text-stone-500 text-[10px] uppercase">Via Bluetooth</p>
+                <p class="text-stone-500 text-[10px] uppercase">Bluetooth Integrado</p>
             </div>
             <div class="text-center space-y-3">
                 <span class="text-2xl">🔘</span>
@@ -122,103 +131,108 @@
     </section>
 
     <!-- Foco na Originalidade -->
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div class="rounded-[2rem] overflow-hidden border border-stone-800 bg-stone-900 shadow-2xl">
-                <img src="https://i.ibb.co/kgD1q7n7/e08f4bb4-6639-46aa-9ae7-ed792c6f04f7.jpg" alt="Fita Desligada" class="w-full h-auto">
-            </div>
-            <div class="space-y-6">
-                <div class="w-12 h-12 bg-purple-600/20 flex items-center justify-center rounded-xl">
-                    <span class="text-purple-500 text-2xl">👓</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-black italic uppercase leading-tight">Invisível quando <br/><span class="text-purple-500">desligado.</span></h2>
-                <p class="text-stone-400 italic text-lg leading-relaxed">
-                    A nossa fita de fibra ótica é tão discreta que, quando desligada, torna-se imperceptível nos vãos do painel. Acabamento padrão de montadora para quem valoriza os detalhes e a discrição.
-                </p>
-                <div class="bg-purple-600/10 border border-purple-600/30 p-4 rounded-xl inline-block text-[10px] font-black uppercase tracking-widest text-purple-400">
-                    Acabamento Premium MW
-                </div>
-            </div>
+    <section class="py-24 px-6 max-w-5xl mx-auto space-y-12">
+        <div class="space-y-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-black italic uppercase leading-tight">Invisível quando <br/><span class="text-purple-500">desligado.</span></h2>
+            <p class="text-stone-400 italic text-lg leading-relaxed max-w-2xl mx-auto">
+                A nossa fita de fibra ótica é tão discreta que, quando desligada, torna-se imperceptível nos vãos do painel. Acabamento padrão de montadora.
+            </p>
+        </div>
+        <div class="rounded-[2.5rem] overflow-hidden border border-stone-800 bg-stone-900 shadow-2xl">
+            <img src="https://i.ibb.co/kgD1q7n7/e08f4bb4-6639-46aa-9ae7-ed792c6f04f7.jpg" alt="Fita Desligada Original" class="w-full h-auto">
         </div>
     </section>
 
-    <!-- Produto Principal -->
+    <!-- Produto Principal - Kit 18 Pontos -->
     <section class="py-24 px-6">
-        <div class="max-w-6xl mx-auto bg-stone-900/40 rounded-[3rem] border border-stone-800 p-8 md:p-16 relative overflow-hidden bg-cyber">
-            <div class="absolute top-0 right-0 p-8">
-                <span class="bg-purple-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Top de Linha</span>
+        <div class="max-w-5xl mx-auto bg-stone-900/40 rounded-[3.5rem] border border-stone-800 p-8 md:p-16 space-y-16 bg-cyber overflow-hidden">
+            <!-- Header do Produto -->
+            <div class="text-center space-y-6 relative z-10">
+                <span class="bg-purple-600 text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-lg">Configuração Top de Linha</span>
+                <h2 class="text-4xl md:text-7xl font-black italic uppercase tracking-tighter leading-none">
+                    Kit Premium <br />
+                    <span class="text-purple-500 text-glow-purple">18 Pontos de Luz</span>
+                </h2>
+                <p class="text-stone-300 italic text-lg max-w-xl mx-auto">
+                    Cobertura total da cabine. A experiência definitiva para quem busca luxo e exclusividade no interior do veículo.
+                </p>
             </div>
-            
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <h2 class="text-4xl md:text-6xl font-black italic uppercase leading-none tracking-tighter">
-                        Kit Premium <br />
-                        <span class="text-purple-500">18 Pontos de Luz</span>
-                    </h2>
-                    <p class="text-stone-300 italic leading-relaxed">
-                        A experiência definitiva em iluminação. Uma imersão total em cores para transformar cada viagem em um evento.
-                    </p>
-                    
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-black/50 p-4 rounded-xl border border-stone-800 text-[10px] font-black uppercase tracking-widest">● 4 Portas (Friso)</div>
-                        <div class="bg-black/50 p-4 rounded-xl border border-stone-800 text-[10px] font-black uppercase tracking-widest">● 4 Pés (Assoalho)</div>
-                        <div class="bg-black/50 p-4 rounded-xl border border-stone-800 text-[10px] font-black uppercase tracking-widest">● Painel Frontal</div>
-                        <div class="bg-black/50 p-4 rounded-xl border border-stone-800 text-[10px] font-black uppercase tracking-widest">● 4 Puxadores</div>
-                        <div class="bg-black/50 p-4 rounded-xl border border-stone-800 text-[10px] font-black uppercase tracking-widest">● 4 Bolsões de Porta</div>
-                    </div>
 
-                    <div class="pt-8 border-t border-stone-800">
-                        <div class="flex items-baseline gap-2 mb-6">
-                            <span class="text-6xl font-black italic">R$ 1.600</span>
-                            <span class="text-stone-500 font-bold uppercase text-xs">Instalado</span>
-                        </div>
-                        <a href="https://wa.me/message/OGFM7AEP7MNSP1?text=Olá! Quero agendar a instalação do Kit Completo de 18 Pontos (R$ 1600)." class="block w-full text-center bg-white text-black py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-purple-600 hover:text-white transition-all shadow-xl">
-                            Reservar Agora
-                        </a>
-                    </div>
+            <!-- Lista de Pontos -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div class="bg-black/40 p-4 rounded-2xl border border-stone-800 text-center">
+                    <p class="text-[10px] font-black uppercase text-purple-400 mb-1">4 Portas</p>
+                    <p class="text-[9px] text-stone-500 uppercase font-bold">Frisos</p>
                 </div>
+                <div class="bg-black/40 p-4 rounded-2xl border border-stone-800 text-center">
+                    <p class="text-[10px] font-black uppercase text-purple-400 mb-1">4 Pés</p>
+                    <p class="text-[9px] text-stone-500 uppercase font-bold">Assoalho</p>
+                </div>
+                <div class="bg-black/40 p-4 rounded-2xl border border-stone-800 text-center">
+                    <p class="text-[10px] font-black uppercase text-purple-400 mb-1">Painel</p>
+                    <p class="text-[9px] text-stone-500 uppercase font-bold">Frontal</p>
+                </div>
+                <div class="bg-black/40 p-4 rounded-2xl border border-stone-800 text-center">
+                    <p class="text-[10px] font-black uppercase text-purple-400 mb-1">4 Puxadores</p>
+                    <p class="text-[9px] text-stone-500 uppercase font-bold">Internos</p>
+                </div>
+                <div class="bg-black/40 p-4 rounded-2xl border border-stone-800 text-center">
+                    <p class="text-[10px] font-black uppercase text-purple-400 mb-1">4 Bolsões</p>
+                    <p class="text-[9px] text-stone-500 uppercase font-bold">Portas</p>
+                </div>
+            </div>
 
-                <div class="grid gap-4">
-                    <div class="rounded-3xl overflow-hidden border border-purple-500/20 h-64 glow-purple">
-                        <img src="https://i.ibb.co/d4grZTdK/1767823652843.jpg" class="w-full h-full object-cover" alt="Frontal">
-                    </div>
-                    <div class="rounded-3xl overflow-hidden border border-purple-500/20 h-64">
-                        <img src="https://i.ibb.co/QvdPDFBP/1767823655981.jpg" class="w-full h-full object-cover" alt="Traseira">
-                    </div>
+            <!-- Galeria do Kit - Fotos Grandes para mostrar detalhes -->
+            <div class="space-y-8">
+                <div class="rounded-[2rem] overflow-hidden border border-purple-500/20 glow-purple bg-black">
+                    <img src="https://i.ibb.co/d4grZTdK/1767823652843.jpg" class="img-display" alt="Interior Frontal Completo">
                 </div>
+                <div class="rounded-[2rem] overflow-hidden border border-purple-500/20 bg-black">
+                    <img src="https://i.ibb.co/QvdPDFBP/1767823655981.jpg" class="img-display" alt="Interior Traseiro Detalhado">
+                </div>
+            </div>
+
+            <!-- CTA de Preço -->
+            <div class="pt-12 border-t border-stone-800 text-center space-y-8">
+                <div class="flex flex-col items-center gap-2">
+                    <span class="text-7xl md:text-8xl font-black italic tracking-tighter">R$ 1.600</span>
+                    <span class="text-stone-500 font-black uppercase tracking-[0.5em] text-xs">Projeto Completo Instalado</span>
+                </div>
+                <a href="https://wa.me/message/OGFM7AEP7MNSP1?text=Olá! Quero agendar a instalação do Kit Completo de 18 Pontos (R$ 1600)." class="inline-block bg-white text-black px-16 py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-purple-600 hover:text-white transition-all shadow-2xl">
+                    Garantir Meu Kit
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Outros Kits -->
-    <section class="py-24 px-6 text-center space-y-8">
-        <h3 class="text-3xl font-black italic uppercase">Kit Personalizado</h3>
-        <p class="text-stone-400 italic max-w-xl mx-auto">
-            Não precisa de todos os pontos? Montamos o projeto de acordo com a sua necessidade e o modelo do seu carro.
-        </p>
-        <div class="inline-block bg-stone-900 border border-purple-500/30 px-10 py-5 rounded-2xl">
-            <span class="text-2xl font-black italic uppercase">Valores sob consulta</span>
-        </div>
-        <div class="pt-4">
-            <a href="https://wa.me/message/OGFM7AEP7MNSP1" class="text-purple-500 font-black uppercase tracking-widest text-sm hover:underline italic">Falar com Especialista →</a>
+    <!-- Seção de Kits Custom -->
+    <section class="py-24 px-6 text-center space-y-12">
+        <div class="max-w-2xl mx-auto space-y-6">
+            <h3 class="text-3xl font-black italic uppercase">Kit Personalizado</h3>
+            <p class="text-stone-400 italic">
+                Prefere focar apenas em pontos específicos? Montamos o orçamento de acordo com o seu projeto.
+            </p>
+            <div class="inline-block bg-stone-900 border border-purple-500/30 px-10 py-6 rounded-2xl">
+                <span class="text-2xl font-black italic uppercase tracking-tight">Valores sob consulta</span>
+            </div>
+            <div class="pt-4">
+                <a href="https://wa.me/message/OGFM7AEP7MNSP1" class="text-purple-500 font-black uppercase tracking-widest text-sm hover:underline italic">Falar com Especialista →</a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-stone-900 bg-black text-center md:text-left">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="space-y-2">
-                <div class="flex items-center gap-2 justify-center md:justify-start">
-                    <div class="bg-purple-600 text-black px-2 py-0.5 rounded font-black italic text-sm">MW</div>
-                    <span class="text-sm font-bold uppercase tracking-tighter">Neon Automotivo</span>
-                </div>
-                <p class="text-stone-600 text-[10px] uppercase font-black tracking-widest italic">Baixada Santista - Personalização de Elite</p>
+    <!-- Rodapé -->
+    <footer class="py-16 px-6 border-t border-stone-900 bg-black text-center">
+        <div class="max-w-7xl mx-auto space-y-8">
+            <div class="flex flex-col items-center gap-4">
+                <div class="bg-purple-600 text-black px-3 py-1 rounded font-black italic text-xl shadow-[0_0_15px_#a855f7]">MW</div>
+                <p class="text-stone-600 text-[10px] uppercase font-black tracking-widest italic">Baixada Santista - Estética Automotiva de Elite</p>
             </div>
-            <div class="flex gap-6 text-stone-500 text-xs font-black uppercase italic">
+            <div class="flex justify-center gap-8 text-stone-500 text-[10px] font-black uppercase italic tracking-widest">
                 <a href="https://linktr.ee/redesmw" class="hover:text-purple-500 transition-colors">Redes Sociais</a>
                 <a href="https://wa.me/message/OGFM7AEP7MNSP1" class="hover:text-purple-500 transition-colors">WhatsApp</a>
             </div>
-            <p class="text-stone-700 text-[10px] font-black uppercase tracking-widest">© 2024 MW Estética Automotiva</p>
+            <p class="text-stone-800 text-[9px] font-black uppercase tracking-widest">© 2024 MW Neon Automotiva. Todos os direitos reservados.</p>
         </div>
     </footer>
 
