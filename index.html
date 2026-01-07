@@ -1,208 +1,226 @@
-import React, { useState, useEffect } from 'react';
-import { Smartphone, ZapOff, ShieldCheck, MessageCircle, ChevronRight, Star, Instagram, EyeOff, LayoutGrid, ToggleRight } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MW Neon Automotivo - Customização de Elite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #050505; 
+            color: #ffffff; 
+        }
 
-const App = () => {
-  const [scrolled, setScrolled] = useState(false);
+        .glow-red {
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.3);
+        }
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+        .glow-purple {
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+        }
 
-  const waLink = "https://wa.me/message/OGFM7AEP7MNSP1";
+        .text-glow-purple {
+            text-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+        }
 
-  return (
-    <div className="min-h-screen bg-[#050505] text-white selection:bg-purple-500 selection:text-white overflow-x-hidden">
-      {/* Navbar */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 border-b ${scrolled ? 'bg-black/80 backdrop-blur-md border-purple-500/30 py-4' : 'bg-transparent border-transparent py-6'}`}>
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="bg-purple-600 text-black px-3 py-1 rounded font-black italic text-xl shadow-[0_0_15px_rgba(168,85,247,0.5)]">MW</div>
-            <span className="text-lg font-bold tracking-tighter uppercase italic">Neon <span className="text-purple-500 font-black">Automotivo</span></span>
-          </div>
-          <a href={waLink} className="hidden md:flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white px-6 py-2 rounded-full font-bold transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)]">
-            <MessageCircle size={18} />
-            Orçamento VIP
-          </a>
+        .bg-cyber {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0b2e 100%);
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Barra de Navegação -->
+    <nav class="fixed w-full z-50 py-6 nav-blur border-b border-purple-500/20">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-purple-600 text-black px-3 py-1 rounded font-black italic text-xl shadow-[0_0_15px_#a855f7]">MW</div>
+                <span class="text-lg font-bold tracking-tighter uppercase italic">Neon <span class="text-purple-500 font-black">Automotivo</span></span>
+            </div>
+            <a href="https://wa.me/message/OGFM7AEP7MNSP1" class="hidden md:block bg-purple-600 hover:bg-purple-500 text-white px-6 py-2 rounded-full font-bold transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] text-sm uppercase">
+                Orçamento VIP
+            </a>
         </div>
-      </nav>
+    </nav>
 
-      {/* Hero Section - Foto Painel Vermelho em Destaque */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-red-900/20 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-[10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/10 blur-[120px] rounded-full"></div>
-
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 relative z-10 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/30 px-4 py-2 rounded-full mx-auto lg:mx-0">
-              <ShieldCheck size={14} className="text-purple-500" />
-              <span className="text-[10px] uppercase font-black tracking-widest text-purple-400">Instalação Padrão Fábrica</span>
+    <!-- Hero Section - Painel Vermelho -->
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-red-900/10 blur-[120px] rounded-full"></div>
+        
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8 relative z-10 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/30 px-4 py-2 rounded-full mx-auto lg:mx-0">
+                    <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                    <span class="text-[10px] uppercase font-black tracking-widest text-red-400">Instalação Padrão de Fábrica</span>
+                </div>
+                <h1 class="text-5xl md:text-8xl font-black italic leading-[0.9] tracking-tighter uppercase">
+                    O Futuro é <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600 text-glow-purple">Custom.</span>
+                </h1>
+                <p class="text-stone-400 text-lg md:text-xl max-w-lg leading-relaxed italic mx-auto lg:mx-0">
+                    Personalização premium com sistema de fibra ótica. 100% Plug & Play, sem corte de fios e preservando a originalidade do seu veículo.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="https://wa.me/message/OGFM7AEP7MNSP1" class="bg-purple-600 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-[0_0_30px_rgba(168,85,247,0.4)]">
+                        Agendar Agora
+                    </a>
+                </div>
             </div>
-            <h1 className="text-5xl md:text-8xl font-black italic leading-tight tracking-tighter uppercase">
-              O Futuro é <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-purple-600 to-fuchsia-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.4)]">Custom.</span>
-            </h1>
-            <p className="text-stone-400 text-lg md:text-xl max-w-lg leading-relaxed italic mx-auto lg:mx-0">
-              Personalização premium com sistema de fibra óptica. 100% Plug & Play, sem corte de fios e preservando a originalidade do seu veículo.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href={waLink} className="bg-purple-600 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-[0_0_30px_rgba(168,85,247,0.4)]">
-                Agendar Agora
-              </a>
-            </div>
-          </div>
 
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-purple-600 rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-            <div className="relative rounded-[2rem] overflow-hidden border border-red-500/30 shadow-2xl">
-                <img 
-                  src="https://i.ibb.co/C59hgK1X/1767823996072.jpg" 
-                  alt="Painel em Vermelho Customizado" 
-                  className="w-full h-[500px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6 p-6 bg-black/60 backdrop-blur-md rounded-2xl border border-white/10">
-                   <div className="flex justify-between items-center">
-                      <div className="flex items-center gap-3">
-                        <Smartphone className="text-red-500 animate-pulse" />
-                        <div>
-                          <p className="text-xs font-black uppercase tracking-widest text-white">App Control</p>
-                          <p className="text-[10px] text-stone-400 uppercase font-bold">Cores Infinitas via Bluetooth</p>
+            <div class="relative">
+                <div class="rounded-[2.5rem] overflow-hidden border border-red-500/30 glow-red">
+                    <img src="https://i.ibb.co/C59hgK1X/1767823996072.jpg" alt="Painel em Vermelho" class="w-full h-[500px] object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 p-6 bg-black/60 backdrop-blur-md rounded-2xl border border-white/10 flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-red-500/20 flex items-center justify-center rounded-lg">
+                                <span class="text-red-500">📱</span>
+                            </div>
+                            <div>
+                                <p class="text-xs font-black uppercase text-white">Controle por App</p>
+                                <p class="text-[10px] text-stone-400 uppercase font-bold">Cores Infinitas via Bluetooth</p>
+                            </div>
                         </div>
-                      </div>
-                   </div>
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      {/* Tech Specs */}
-      <section className="py-24 px-6 bg-[#080808] border-y border-stone-900">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
-            {[
-              { icon: <ZapOff />, title: "Zero Corte de Fio", desc: "Instalação limpa com conectores específicos." },
-              { icon: <ShieldCheck />, title: "Originalidade", desc: "O carro continua com todas as funções de fábrica." },
-              { icon: <Smartphone />, title: "Controle Total", desc: "Mude as cores e efeitos pelo App no celular." },
-              { icon: <ToggleRight />, title: "Botão Oculto", desc: "Acionamento físico discreto no painel." }
-            ].map((s, i) => (
-              <div key={i} className="text-center space-y-4">
-                <div className="text-purple-500 flex justify-center">{s.icon}</div>
-                <h4 className="font-black uppercase italic text-sm tracking-widest">{s.title}</h4>
-                <p className="text-stone-500 text-xs">{s.desc}</p>
-              </div>
-            ))}
+    <!-- Tech Specs -->
+    <section class="py-16 px-6 bg-[#080808] border-y border-stone-900">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center space-y-3">
+                <span class="text-2xl">⚡</span>
+                <h4 class="font-black uppercase italic text-xs tracking-widest">Zero Corte</h4>
+                <p class="text-stone-500 text-[10px] uppercase">Conectores Originais</p>
+            </div>
+            <div class="text-center space-y-3">
+                <span class="text-2xl">🛡️</span>
+                <h4 class="font-black uppercase italic text-xs tracking-widest">Originalidade</h4>
+                <p class="text-stone-500 text-[10px] uppercase">Mantém a Garantia</p>
+            </div>
+            <div class="text-center space-y-3">
+                <span class="text-2xl">📱</span>
+                <h4 class="font-black uppercase italic text-xs tracking-widest">App Control</h4>
+                <p class="text-stone-500 text-[10px] uppercase">Via Bluetooth</p>
+            </div>
+            <div class="text-center space-y-3">
+                <span class="text-2xl">🔘</span>
+                <h4 class="font-black uppercase italic text-xs tracking-widest">Botão Oculto</h4>
+                <p class="text-stone-500 text-[10px] uppercase">Acionamento Discreto</p>
+            </div>
         </div>
-      </section>
+    </section>
 
-      {/* Originality Focus - Foto Fita Desligada */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-           <div className="order-2 lg:order-1 rounded-[2rem] overflow-hidden border border-stone-800">
-              <img src="https://i.ibb.co/kgD1q7n7/e08f4bb4-6639-46aa-9ae7-ed792c6f04f7.jpg" alt="Fita desligada original" className="w-full h-auto" />
-           </div>
-           <div className="order-1 lg:order-2 space-y-6">
-              <EyeOff className="text-purple-500" size={40} />
-              <h2 className="text-3xl md:text-5xl font-black italic uppercase leading-tight">Invisível quando <br/><span className="text-purple-500">desligado.</span></h2>
-              <p className="text-stone-400 italic text-lg leading-relaxed">
-                Nossa fita de fibra óptica é tão discreta que, quando desligada, se torna imperceptível nos vãos do painel. Acabamento padrão montadora para quem valoriza os detalhes.
-              </p>
-              <div className="flex items-center gap-3 bg-stone-900/50 p-4 rounded-xl border border-stone-800 inline-block">
-                <span className="text-xs font-black uppercase text-purple-400 tracking-widest">Resultado Profissional MW</span>
-              </div>
-           </div>
-        </div>
-      </section>
-
-      {/* Flagship Product - Foto Interior Frontal e Traseira */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto bg-stone-900/40 rounded-[3rem] border border-stone-800 p-8 md:p-16 relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-8">
-             <span className="bg-purple-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(168,85,247,0.4)]">Mais Vendido</span>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-black italic uppercase leading-none">
-                Kit Premium <br />
-                <span className="text-purple-500">18 Pontos de Luz</span>
-              </h2>
-              <p className="text-stone-400 italic leading-relaxed">
-                A experiência definitiva. Uma imersão completa em cores para quem busca o máximo em estética automotiva.
-              </p>
-              
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  "4 Portas (Friso)", "4 Pés (Assoalho)", "Painel Frontal", 
-                  "4 Puxadores", "4 Bolsões de Porta"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3 bg-black/40 p-4 rounded-xl border border-stone-800">
-                    <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
-                    <span className="text-[10px] font-black uppercase tracking-widest text-stone-300">{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="pt-8 border-t border-stone-800">
-                <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-5xl font-black italic">R$ 1.600</span>
-                  <span className="text-stone-500 font-bold uppercase text-xs">Completo Instalado</span>
+    <!-- Foco na Originalidade -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="rounded-[2rem] overflow-hidden border border-stone-800 bg-stone-900 shadow-2xl">
+                <img src="https://i.ibb.co/kgD1q7n7/e08f4bb4-6639-46aa-9ae7-ed792c6f04f7.jpg" alt="Fita Desligada" class="w-full h-auto">
+            </div>
+            <div class="space-y-6">
+                <div class="w-12 h-12 bg-purple-600/20 flex items-center justify-center rounded-xl">
+                    <span class="text-purple-500 text-2xl">👓</span>
                 </div>
-                <a href={waLink + "?text=Olá! Quero agendar a instalação do Kit Completo de 18 Pontos (R$ 1600)."} className="block w-full text-center bg-white text-black py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-purple-500 hover:text-white transition-all shadow-xl">
-                  Reservar Agora
-                </a>
-              </div>
+                <h2 class="text-4xl md:text-5xl font-black italic uppercase leading-tight">Invisível quando <br/><span class="text-purple-500">desligado.</span></h2>
+                <p class="text-stone-400 italic text-lg leading-relaxed">
+                    A nossa fita de fibra ótica é tão discreta que, quando desligada, torna-se imperceptível nos vãos do painel. Acabamento padrão de montadora para quem valoriza os detalhes e a discrição.
+                </p>
+                <div class="bg-purple-600/10 border border-purple-600/30 p-4 rounded-xl inline-block text-[10px] font-black uppercase tracking-widest text-purple-400">
+                    Acabamento Premium MW
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div className="grid grid-cols-1 gap-4">
-               <div className="h-64 bg-stone-800 rounded-3xl overflow-hidden border border-purple-500/20 shadow-[0_0_30px_rgba(168,85,247,0.2)]">
-                  <img src="https://i.ibb.co/d4grZTdK/1767823652843.jpg" className="w-full h-full object-cover" alt="Interior Frontal" />
-               </div>
-               <div className="h-64 bg-stone-800 rounded-3xl overflow-hidden border border-purple-500/20 shadow-[0_0_30px_rgba(168,85,247,0.2)]">
-                  <img src="https://i.ibb.co/QvdPDFBP/1767823655981.jpg" className="w-full h-full object-cover" alt="Interior Traseiro" />
-               </div>
+    <!-- Produto Principal -->
+    <section class="py-24 px-6">
+        <div class="max-w-6xl mx-auto bg-stone-900/40 rounded-[3rem] border border-stone-800 p-8 md:p-16 relative overflow-hidden bg-cyber">
+            <div class="absolute top-0 right-0 p-8">
+                <span class="bg-purple-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Top de Linha</span>
             </div>
-          </div>
-        </div>
-      </section>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-6xl font-black italic uppercase leading-none tracking-tighter">
+                        Kit Premium <br />
+                        <span class="text-purple-500">18 Pontos de Luz</span>
+                    </h2>
+                    <p class="text-stone-300 italic leading-relaxed">
+                        A experiência definitiva em iluminação. Uma imersão total em cores para transformar cada viagem em um evento.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-black/50 p-4 rounded-xl border border-stone-800 text-[10px] font-black uppercase tracking-widest">● 4 Portas (Friso)</div>
+                        <div class="bg-black/50 p-4 rounded-xl border border-stone-800 text-[10px] font-black uppercase tracking-widest">● 4 Pés (Assoalho)</div>
+                        <div class="bg-black/50 p-4 rounded-xl border border-stone-800 text-[10px] font-black uppercase tracking-widest">● Painel Frontal</div>
+                        <div class="bg-black/50 p-4 rounded-xl border border-stone-800 text-[10px] font-black uppercase tracking-widest">● 4 Puxadores</div>
+                        <div class="bg-black/50 p-4 rounded-xl border border-stone-800 text-[10px] font-black uppercase tracking-widest">● 4 Bolsões de Porta</div>
+                    </div>
 
-      {/* Custom Section */}
-      <section className="py-24 px-6 text-center space-y-12 bg-gradient-to-b from-transparent to-black">
-        <div className="max-w-2xl mx-auto space-y-6">
-          <LayoutGrid className="mx-auto text-purple-500" size={40} />
-          <h3 className="text-3xl font-black italic uppercase">Kit Personalizado</h3>
-          <p className="text-stone-400 italic">
-            Não precisa de todos os pontos? Montamos um orçamento de acordo com a sua necessidade.
-          </p>
-          <a href={waLink + "?text=Olá! Quero um orçamento para um kit de neon personalizado."} className="inline-flex items-center gap-4 border border-purple-500/50 bg-purple-500/5 px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-purple-500/20 transition-all">
-            Valores sob consulta
-            <ChevronRight size={18} />
-          </a>
-        </div>
-      </section>
+                    <div class="pt-8 border-t border-stone-800">
+                        <div class="flex items-baseline gap-2 mb-6">
+                            <span class="text-6xl font-black italic">R$ 1.600</span>
+                            <span class="text-stone-500 font-bold uppercase text-xs">Instalado</span>
+                        </div>
+                        <a href="https://wa.me/message/OGFM7AEP7MNSP1?text=Olá! Quero agendar a instalação do Kit Completo de 18 Pontos (R$ 1600)." class="block w-full text-center bg-white text-black py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-purple-600 hover:text-white transition-all shadow-xl">
+                            Reservar Agora
+                        </a>
+                    </div>
+                </div>
 
-      {/* Footer */}
-      <footer className="py-12 px-6 border-t border-stone-900 bg-black">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 justify-center md:justify-start">
-              <div className="bg-purple-600 text-black px-2 py-0.5 rounded font-black italic text-sm shadow-[0_0_10px_#a855f7]">MW</div>
-              <span className="text-sm font-bold uppercase tracking-tighter">Neon Automotivo</span>
+                <div class="grid gap-4">
+                    <div class="rounded-3xl overflow-hidden border border-purple-500/20 h-64 glow-purple">
+                        <img src="https://i.ibb.co/d4grZTdK/1767823652843.jpg" class="w-full h-full object-cover" alt="Frontal">
+                    </div>
+                    <div class="rounded-3xl overflow-hidden border border-purple-500/20 h-64">
+                        <img src="https://i.ibb.co/QvdPDFBP/1767823655981.jpg" class="w-full h-full object-cover" alt="Traseira">
+                    </div>
+                </div>
             </div>
-            <p className="text-stone-600 text-[10px] uppercase font-black tracking-widest italic">Personalização Premium - Baixada Santista</p>
-          </div>
-          
-          <div className="flex gap-6">
-            <a href="https://linktr.ee/redesmw" target="_blank" className="text-stone-500 hover:text-purple-500 transition-colors"><Instagram size={20} /></a>
-            <a href={waLink} className="text-stone-500 hover:text-purple-500 transition-colors"><MessageCircle size={20} /></a>
-          </div>
-
-          <p className="text-stone-700 text-[10px] font-black uppercase tracking-widest">© 2024 MW Estética Automotiva</p>
         </div>
-      </footer>
-    </div>
-  );
-};
+    </section>
 
-export default App;
+    <!-- Outros Kits -->
+    <section class="py-24 px-6 text-center space-y-8">
+        <h3 class="text-3xl font-black italic uppercase">Kit Personalizado</h3>
+        <p class="text-stone-400 italic max-w-xl mx-auto">
+            Não precisa de todos os pontos? Montamos o projeto de acordo com a sua necessidade e o modelo do seu carro.
+        </p>
+        <div class="inline-block bg-stone-900 border border-purple-500/30 px-10 py-5 rounded-2xl">
+            <span class="text-2xl font-black italic uppercase">Valores sob consulta</span>
+        </div>
+        <div class="pt-4">
+            <a href="https://wa.me/message/OGFM7AEP7MNSP1" class="text-purple-500 font-black uppercase tracking-widest text-sm hover:underline italic">Falar com Especialista →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-stone-900 bg-black text-center md:text-left">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="space-y-2">
+                <div class="flex items-center gap-2 justify-center md:justify-start">
+                    <div class="bg-purple-600 text-black px-2 py-0.5 rounded font-black italic text-sm">MW</div>
+                    <span class="text-sm font-bold uppercase tracking-tighter">Neon Automotivo</span>
+                </div>
+                <p class="text-stone-600 text-[10px] uppercase font-black tracking-widest italic">Baixada Santista - Personalização de Elite</p>
+            </div>
+            <div class="flex gap-6 text-stone-500 text-xs font-black uppercase italic">
+                <a href="https://linktr.ee/redesmw" class="hover:text-purple-500 transition-colors">Redes Sociais</a>
+                <a href="https://wa.me/message/OGFM7AEP7MNSP1" class="hover:text-purple-500 transition-colors">WhatsApp</a>
+            </div>
+            <p class="text-stone-700 text-[10px] font-black uppercase tracking-widest">© 2024 MW Estética Automotiva</p>
+        </div>
+    </footer>
+
+</body>
+</html>
